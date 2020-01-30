@@ -7,6 +7,7 @@ describe "songs", type:  :feature do
     @song = @artist.songs.create!(title: "The Grid")
   end
 
+  
   context "when nested under artists" do
     describe "/artists/:artist_id/songs" do
       it "displays the songs with valid artist" do
@@ -34,6 +35,8 @@ describe "songs", type:  :feature do
       end
     end
   end
+ 
+ #song/show, using artists_helper
   describe "/songs/:id" do
 
     it "links to the artist" do
